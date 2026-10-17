@@ -1,0 +1,64 @@
+# Git Branching Guide
+
+## What Is a Branch?
+
+A branch is a separate line of development. It allows developers to work on features without directly changing the main branch.
+
+## Create a Branch
+
+```bash
+git branch feature/docs
+```
+
+Creates a branch named `feature/docs`.
+
+## Switch Branches
+
+```bash
+git switch feature/docs
+```
+
+Switches to the `feature/docs` branch.
+
+## Create and Switch in One Command
+
+```bash
+git switch -c feature/new-feature
+```
+
+Creates a new branch and switches to it.
+
+## List Branches
+
+```bash
+git branch
+```
+
+Lists local branches. The current branch is marked with an asterisk.
+
+## Merge a Branch
+
+First, switch to the branch that should receive the changes, then merge:
+
+```bash
+git switch main
+git merge feature/docs
+```
+
+Only merge when the changes are ready and you have permission to update that branch.
+
+## Delete a Branch
+
+```bash
+git branch -d feature/docs
+```
+
+Deletes a local branch that Git considers safely merged.
+
+## Branching Best Practices
+
+- Use descriptive branch names.
+- Create feature branches for separate tasks.
+- Commit your changes regularly.
+- Test changes before merging.
+- Avoid direct commits to `main` when team rules prohibit them.
